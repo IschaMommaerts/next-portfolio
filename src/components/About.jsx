@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 export default function About() {
@@ -9,12 +8,12 @@ export default function About() {
       </h1>
       <div className="flex flex-col-reverse lg:flex-row gap-10">
         <div>
-          <img src="assets/profile.svg" alt="" />
+          <img src="/assets/profile.svg" alt="" />
         </div>
         <div className="lg:w-8/12 space-y-4">
           <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
             Hallo ik ben Ischa Mommaerts student applicatieontwikkeling aan de&nbsp;
-            <a href="https://www.thomasmore.be/" target="_blank" className="text-primary font-bold cursor-pointer hover:underline decoration-2">Thomas More</a> hogeschool in Geel. Ik ben geïntereseerd in alles wat met computers te maken heeft, zowel in mijn studies als in mijn vrije tijd.
+            <a href="https://www.thomasmore.be/" target="_blank" className="text-primary font-bold cursor-pointer hover:underline decoration-2">Thomas More</a> hogeschool in Geel. Ik ben geïnteresseerd in alles wat met computers te maken heeft, zowel in mijn studies als in mijn vrije tijd.
           </p>
           <ul className="text-lg text-primary font-bold">
             <li>

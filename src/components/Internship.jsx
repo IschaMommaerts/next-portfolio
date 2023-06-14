@@ -1,5 +1,4 @@
 import React from "react";
-import OfficiousIcon from "./OfficiousIcon";
 
 function Internship() {
   return (
@@ -28,7 +27,7 @@ function Internship() {
                 src="assets/officious-white.svg"
                 className="hidden dark:block h-10"
               />
-              <img src="assets/officious.svg" className="dark:hidden h-10" />
+              <img src="/assets/officious.svg" className="dark:hidden h-10" />
             </div>
             <p>
               Het stageproject waar ik aan werkte heette “Officious HR-Tool van
@@ -37,10 +36,7 @@ function Internship() {
               aan hun klanten aanbieden.
             </p>
             <p>
-              Vorig jaar werkte andere studenten van Thomas More ook al aan dit
-              stageproject. Zij hadden voor een groot deel de backend al
-              ontwikkeld. Mijn focus voor dit project lag dus op het ontwikkelen
-              van de frontend in Angular.
+              De focus van het stageproject lag vooral op de ontwikkeling van de front-end in Angular. Ook werden er aanpassingen gemaakt en uitbreidingen gedaan op de NestJs backend met een MongoDB databank.
             </p>
           </div>
           <div className="space-y-2">
@@ -56,7 +52,7 @@ function Internship() {
                 </a>
               </li>
               <li>
-                <a className="text-primary font-bold cursor-pointer hover:underline decoration-2" >
+                <a className="text-primary font-bold cursor-pointer hover:underline decoration-2" href="assets/realisatie.pdf" target="_blank" >
                   Realisatie
                 </a>
               </li>
@@ -69,7 +65,7 @@ function Internship() {
           </div>
         </div>
         <div>
-          <img src="assets/scrum.svg" alt="" />
+          <img src="/assets/scrum.svg" alt="" />
         </div>
       </div>
     </section>

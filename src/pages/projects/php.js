@@ -1,16 +1,13 @@
-import Image from "next/image";
+import CarouselWrapper from "@/components/CarouselWrapper";
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDiscord,
-  faGithub,
-  faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import SliderComponent from "@/components/swiper";
+
 
 function ProjectPhp() {
-  const images = ["/assets/projects/php/medication.jpg", "/assets/projects/php/prescriptions.jpg", "/assets/projects/php/prescribe.jfif"];
+  const slides = [
+    { src: "/assets/projects/php/medication.jpg" },
+    { src: "/assets/projects/php/prescriptions.jpg" },
+    { src: "/assets/projects/php/prescribe.jfif" },
+  ];
 
   return (
     <div className="space-y-6 pt-12">
@@ -37,7 +34,7 @@ function ProjectPhp() {
         </div>
       </div>
       <div className="lg:flex space-y-6 lg:space-x-6 lg:space-y-0">
-        <div className="space-y-4">
+        <div className="space-y-4 lg:w-6/12">
           <ul className="text-lg text-gray-900 dark:text-gray-100 font-bold">
             <li>Datum:&nbsp;18 Februari 2022 - 25 mei 2022</li>
             <li>Vak:&nbsp; 2ITF - Project PHP (2021)</li>
@@ -54,13 +51,13 @@ function ProjectPhp() {
           </ul>
           <div className="text-lg font-medium text-gray-900 dark:text-gray-100 space-y-4">
             <p>
-              Het project PHP waar ik aan werkte was een Laravel web applicatie
-              voor het verzorgen van jonge alzheimer patienten.
+              Het project PHP waar ik aan werkte was een Laravel webapplicatie
+              voor het verzorgen van jonge alzheimerpatiënten.
             </p>
             <p>
               Aan dit project werkte ik in een groep van 6 studenten. Eerder in
               een projectweek voor de vakken Requirements Analysis en PHP maakte
-              we hiervoor al een designrapport. Op basis van dit design rapport
+              we hiervoor al een designrapport. Op basis van dit designrapport
               gingen we tijdens een volledig semester aan de slag om een
               volwaardige applicatie uit te bouwen.{" "}
             </p>
@@ -77,8 +74,8 @@ function ProjectPhp() {
             </p>
           </div>
         </div>
-        <div className="lg:w-6/12">
-          <SliderComponent images={images}/>
+        <div class="lg:w-6/12">
+          <CarouselWrapper slides={slides} />
         </div>
       </div>
     </div>

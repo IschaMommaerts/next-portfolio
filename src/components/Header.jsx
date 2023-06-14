@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { Fragment } from "react";
 import DarkModeToggle from "./DarkmodeToggle";
@@ -9,19 +8,16 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900">
       <nav className="flex justify-between items-center mx-auto container p-4">
-        <div className="flex items-center space-x-4 group cursor-pointer">
-          <div className="relative h-12 w-12">
-            <Image
-              src="/assets/ischa.jpg"
-              alt="ischa"
-              fill={true}
-              className="rounded-full object-cover border-2 border-gray-900 dark:border-gray-100 group-hover:border-primary group-dark:hover:border-primary"
-            />
-          </div>
+        <Link href="/#home" className="flex items-center space-x-4 group cursor-pointer">
+          <img
+            src="/assets/ischa.jpg"
+            alt="ischa"
+            className="h-12 w-12 rounded-full object-cover border-2 border-gray-900 dark:border-gray-100 group-hover:border-primary group-dark:hover:border-primary"
+          />
           <p className="text-center text-gray-900 dark:text-gray-100 group-hover:text-primary group-dark:hover:text-primary font-bold text-lg">
             Ischa
           </p>
-        </div>
+        </Link>
 
         <div className="hidden lg:flex space-x-12">
           <Link
@@ -60,9 +56,9 @@ function Header() {
 
 function MobileNavigation() {
   return (
-    <Popover>
+    <Popover className="lg:hidden">
       <Popover.Button>
-        <Bars3Icon className="h-10 w-10 bg text-gray-900 dark:text-gray-100" />
+        <Bars3Icon className="h-10 w-10 bg text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary" />
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -74,7 +70,7 @@ function MobileNavigation() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Popover.Overlay className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80" />
+          <Popover.Overlay className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -87,20 +83,24 @@ function MobileNavigation() {
         >
           <Popover.Panel
             focus
-            className="container mx-auto fixed inset-x-4 top-8 z-50 origin-top rounded-xl bg-white p-6 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
+            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-6 ring-1 ring-gray-900/5 dark:bg-gray-900 dark:gray-800"
           >
-            <div className="absolute top-4 right-4 flex items-center justify-end">
+            <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <XMarkIcon className="h-8 w-8 text-gray-900 dark:text-gray-100" />
+                <XMarkIcon className="h-8 w-8 text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary" />
               </Popover.Button>
+              <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                Navigatie
+              </h2>
             </div>
-            <nav>
-              <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/articles">Articles</MobileNavItem>
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/speaking">Speaking</MobileNavItem>
-                <MobileNavItem href="/uses">Uses</MobileNavItem>
+            <nav className="mt-6">
+              <ul className="-my-2 text-base text-gray-900 dark:text-gray-100">
+                <MobileNavItem href="/#home">Home</MobileNavItem>
+                <MobileNavItem href="/#about">Over mezelf</MobileNavItem>
+                <MobileNavItem href="/#internship">Stage</MobileNavItem>
+                <MobileNavItem href="/#projects">
+                  Overige projecten
+                </MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -116,7 +116,7 @@ function MobileNavItem({ href, children }) {
       <Popover.Button
         as={Link}
         href={href}
-        className="block py-2 text-gray-900 dark:text-gray-100 font-bold text-lg"
+        className="block py-2 text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary font-bold text-lg"
       >
         {children}
       </Popover.Button>

@@ -1,20 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 function Projects() {
-  const [index, setIndex] = useState(-1);
   return (
     <section id="projects" className="space-y-6 scroll-mt-24">
-      <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100">
+      <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
         Overige projecten
       </h1>
-      <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
-        Alle projecten waar ik de voorbije 3 jaar van mijn opleiding aan gewerkt
-        heb.
-      </p>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-3 gap-6">
         <Link href="/projects/php" className="grow">
-        <div className="rounded-lg shadow-lg h-full flex flex-col dark:shadow-gray-100/5 hover:shadow-xl">
+          <div className="rounded-lg shadow-lg h-full flex flex-col dark:shadow-gray-100/5 hover:shadow-xl">
             <img
               className="rounded-t-lg"
               src="/assets/projects/php/medication.jpg"
@@ -40,13 +35,13 @@ function Projects() {
                 </span>
               </div>
               <p className="text-lg font-medium text-gray-900 dark:text-gray-100 space-y-4">
-                Applicatie voor verzoriging van jonge alzheimer patiënten.
+                Applicatie voor de verzorging van jonge alzheimer patiënten.
               </p>
             </div>
           </div>
         </Link>
         <Link href="/projects/angular" className="grow">
-        <div className="rounded-lg shadow-lg h-full flex flex-col dark:shadow-gray-100/5 hover:shadow-xl">
+          <div className="rounded-lg shadow-lg h-full flex flex-col dark:shadow-gray-100/5 hover:shadow-xl">
             <img
               className="rounded-t-lg"
               src="/assets/projects/angular/homescreen.jpg"
@@ -75,7 +70,7 @@ function Projects() {
                 </span>
               </div>
               <p className="text-lg font-medium text-gray-900 dark:text-gray-100 space-y-4">
-                Pronostiek app voor sport evenementen.
+                Pronostiek app voor sportevenementen.
               </p>
             </div>
           </div>
@@ -115,13 +110,13 @@ function Projects() {
                 </span>
               </div>
               <p className="text-lg font-medium text-gray-900 dark:text-gray-100 space-y-4">
-                Crowd monitoring systeem voor betere veiligheid bij evenementen.
+                Crowd monitoringsysteem voor betere veiligheid bij evenementen.
               </p>
             </div>
           </div>
         </Link>
         <Link href="/projects/country-quiz" className="grow">
-        <div className="rounded-lg shadow-lg h-full flex flex-col dark:shadow-gray-100/5 hover:shadow-xl">
+          <div className="rounded-lg shadow-lg h-full flex flex-col dark:shadow-gray-100/5 hover:shadow-xl">
             <img
               className="rounded-t-lg"
               src="/assets/projects/country-quiz/countryquizcropped.jpg"
@@ -149,7 +144,7 @@ function Projects() {
                 </span>
               </div>
               <p className="text-lg font-medium text-gray-900 dark:text-gray-100 space-y-4">
-                Quiz app om een land te raden aan de hand van een aantal weetjes.
+                Quiz app: land raden aan de hand van een aantal weetjes.
               </p>
             </div>
           </div>

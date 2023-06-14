@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -7,17 +6,17 @@ function Home() {
   return (
     <section
       id="home"
-      className="flex flex-col lg:flex-row gap-10 items-center py-36 scroll-mt-24"
+      className="flex flex-col lg:flex-row gap-10 items-center py-24 scroll-mt-24"
     >
       <div className="lg:w-7/12">
-        <h1 className="text-7xl font-bold text-gray-900 dark:text-gray-100">
-          Ischa&nbsp;Mommaerts.
+        <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 dark:text-gray-100">
+          Ischa Mommaerts.
         </h1>
         <div className="relative mb-6">
-          <h1 className="text-7xl font-bold text-primary dark:text-primary animate-bottomtotop opacity-0">
+          <h1 className="text-6xl lg:text-7xl font-bold text-primary dark:text-primary animate-bottomtotop opacity-0">
             Developer
           </h1>
-          <h1 className="absolute top-0 text-7xl font-bold text-primary dark:text-primary animate-bottomtotop opacity-0 animation-delay-8000">
+          <h1 className="absolute top-0 text-6xl lg:text-7xl font-bold text-primary dark:text-primary animate-bottomtotop opacity-0 animation-delay-8000">
             Student
           </h1>
         </div>
@@ -32,7 +31,7 @@ function Home() {
         </h3>
       </div>
       <div>
-        <img src="assets/programming.svg" alt="" />
+        <img src="/assets/programming.svg" alt="" />
       </div>
     </section>
   );

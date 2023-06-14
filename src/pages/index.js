@@ -1,6 +1,4 @@
 import About from "@/components/About";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Home from "@/components/Home";
 import Internship from "@/components/Internship";
 import Projects from "@/components/projects";
@@ -18,7 +16,7 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="space-y-36">
+      <div className="space-y-24">
         <Home />
         <About />
         <Internship />

@@ -8,45 +8,45 @@ import { Popover, Transition } from "@headlessui/react";
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900">
-      <nav className="flex justify-between items-center mx-auto container py-2">
-        <div className="flex items-center space-x-4">
+      <nav className="flex justify-between items-center mx-auto container p-4">
+        <div className="flex items-center space-x-4 group cursor-pointer">
           <div className="relative h-12 w-12">
             <Image
-              src="/../public/assets/ischa.jpg"
+              src="/assets/ischa.jpg"
               alt="ischa"
               fill={true}
-              className="rounded-full object-cover border-2 border-gray-900 dark:border-gray-100"
+              className="rounded-full object-cover border-2 border-gray-900 dark:border-gray-100 group-hover:border-primary group-dark:hover:border-primary"
             />
           </div>
-          <p className="text-center text-gray-900 dark:text-gray-100 font-medium text-lg">
+          <p className="text-center text-gray-900 dark:text-gray-100 group-hover:text-primary group-dark:hover:text-primary font-bold text-lg">
             Ischa
           </p>
         </div>
 
-        <div className="hidden md:flex space-x-12">
+        <div className="hidden lg:flex space-x-12">
           <Link
-            href="#home"
-            className="text-gray-900 dark:text-gray-100 font-medium text-lg"
+            href="/#home"
+            className="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary font-bold text-lg"
           >
             Home
           </Link>
           <Link
-            href="#about"
-            className="text-gray-900 dark:text-gray-100 font-medium text-lg"
+            href="/#about"
+            className="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary font-bold text-lg"
           >
-            About
+            Over mezelf
           </Link>
           <Link
-            href="#internship"
-            className="text-gray-900 dark:text-gray-100 font-medium text-lg"
+            href="/#internship"
+            className="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary font-bold text-lg"
           >
-            Internship
+            Stage
           </Link>
           <Link
-            href="/projects"
-            className="text-gray-900 dark:text-gray-100 font-medium text-lg"
+            href="/#projects"
+            className="text-gray-900 dark:text-gray-100 hover:text-primary dark:hover:text-primary font-bold text-lg"
           >
-            Projects
+            Overige projecten
           </Link>
         </div>
         <div className="flex space-x-10">
@@ -116,7 +116,7 @@ function MobileNavItem({ href, children }) {
       <Popover.Button
         as={Link}
         href={href}
-        className="block py-2 text-gray-900 dark:text-gray-100 font-medium text-lg"
+        className="block py-2 text-gray-900 dark:text-gray-100 font-bold text-lg"
       >
         {children}
       </Popover.Button>
